@@ -1,0 +1,108 @@
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(images/login.png);
+  display: flex;
+  justify-content: center;
+}
+ 
+
+.form-container {
+  background-color: white;
+  
+  color: black;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  height: fit-content;
+  width: 350px;
+  padding: 20px;
+  border-radius: 7px;
+}
+
+.form-container h1 {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.form-container h2 {
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.delivery-form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid darkblue;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+select:disabled {
+  color: #888;
+}
+
+.form-error {
+  font-size: 12px;
+  color: red;
+  text-align: center;
+  min-height: 1em;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.submit-button button {
+  background-color: darkblue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button button:hover {
+  background-color: #312dff;
+}
+
+.confirmation-ref {
+  text-align: center;
+  font-size: 14px;
+}
+
+.confirmation-grid {
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.confirmation-grid dt {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.confirmation-grid dd {
+  margin: 0;
+}

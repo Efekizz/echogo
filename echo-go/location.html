@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Delivery Request</title>
+<link rel="stylesheet" href="css/location.css">
+</head>
+<body>
+
+  <div class="form-container">
+    <h1>New Delivery Request</h1>
+
+    <form id="deliveryForm" class="delivery-form" novalidate>
+
+      <h2>Pickup location</h2>
+
+      <label for="pickupState">State</label>
+      <select id="pickupState" name="pickupState" required>
+        <option value="" disabled selected>Select state</option>
+      </select>
+
+      <label for="pickupLga">LGA</label>
+      <select id="pickupLga" name="pickupLga" required disabled>
+        <option value="" disabled selected>Select state first</option>
+      </select>
+
+      <label for="pickupAddress">Street address / landmark</label>
+      <input type="text" id="pickupAddress" name="pickupAddress" placeholder="e.g. 14 Aba Road, opposite GT Bank" required>
+
+      <h2>Drop-off location</h2>
+
+      <label for="dropoffState">State</label>
+      <select id="dropoffState" name="dropoffState" required>
+        <option value="" disabled selected>Select state</option>
+      </select>
+
+      <label for="dropoffLga">LGA</label>
+      <select id="dropoffLga" name="dropoffLga" required disabled>
+        <option value="" disabled selected>Select state first</option>
+      </select>
+
+      <label for="dropoffAddress">Street address / landmark</label>
+      <input type="text" id="dropoffAddress" name="dropoffAddress" placeholder="e.g. 22 Adeola Odeku St, Victoria Island" required>
+
+      <h2>Package</h2>
+
+      <label for="packageName">Package name</label>
+      <input type="text" id="packageName" name="packageName" placeholder="e.g. Samsung A14 phone, sealed carton" required>
+
+      <label for="packageWeight">Weight (kg)</label>
+      <input type="number" id="packageWeight" name="packageWeight" min="0" step="0.1" placeholder="0.0" required>
+
+      <label for="packageDescription">Description</label>
+      <input type="text" id="packageDescription" name="packageDescription" placeholder="What's inside, and anything fragile to know about">
+
+      <h2>Receiver</h2>
+
+      <label for="receiverName">Receiver's name</label>
+      <input type="text" id="receiverName" name="receiverName" placeholder="Full name" required>
+
+      <label for="receiverPhone">Receiver's phone number</label>
+      <input type="tel" id="receiverPhone" name="receiverPhone" placeholder="080X XXX XXXX" pattern="^(\+234|0)[7-9][0-1]\d{8}$" required>
+
+      <label for="upload">Upload photo of package (optional)</label>
+      <input type="file" id="upload" name="upload" accept="image/*">
+
+      <label for="receiverAddress">Delivery address for the receiver</label>
+      <textarea id="receiverAddress" name="receiverAddress" rows="2" placeholder="Full address the receiver should be found at, if different from the drop-off point above" required></textarea>
+
+      <p class="form-error" id="formError" role="alert"></p>
+
+      <div class="submit-button">
+        <button type="submit">Submit delivery request</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="form-container" id="confirmation" hidden>
+    <h1>Request logged</h1>
+    <p class="confirmation-ref">Manifest <span id="confirmManifestNo"></span></p>
+    <dl class="confirmation-grid" id="confirmationGrid"></dl>
+    <div class="submit-button">
+      <button type="button" id="newRequestBtn">Start another request</button>
+    </div>
+  </div>
+
+  <script src="ng-location.js"></script>
+  <script src="location.js"></script>
+</body>
+</html>
