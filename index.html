@@ -1,1 +1,132 @@
-echo-go/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECH0 Go — Send. Track. Deliver.</title>
+<link rel="stylesheet" href="css/index.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <img src="images/echo_go_logot.png" alt="ECH0 Go" class="brand-logo">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html" class="current">Home</a>
+      <a href="location.html">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <h1>Send it.<br>Track it.<br>Deliver it.</h1>
+      <p>Ship anywhere in the city without owning a fleet, paying for fuel, or managing a single vehicle. Point us to a destination we handle the road.</p>
+      <div class="hero-actions">
+        <a href="location.html" class="btn btn-primary">Request a pickup</a>
+        <a href="login.html" class="btn btn-ghost">Log in</a>
+      </div>
+      <dl class="hero-stats">
+        <div><dt>2hr</dt><dd>average city delivery</dd></div>
+        <div><dt>24/7</dt><dd>live tracking</dd></div>
+        <div><dt>0</dt><dd>vehicles you have to own</dd></div>
+      </dl>
+      <!-- <div class="img">
+        <img src="images/background.png" alt="">
+      </div> -->
+    </div>
+    
+
+  </div>
+</section>
+
+<section class="how">
+  <div class="how-head">
+    <h2>How it moves</h2>
+    <p>Three steps, one route, zero guesswork.</p>
+  </div>
+  <div class="how-track">
+    <div class="how-step">
+      <span class="how-index">Pickup</span>
+      <h3>Create a delivery request</h3>
+      <p>Drop in pickup and drop-off points, package details, and who's receiving it.</p>
+    </div>
+    <div class="how-step">
+      <span class="how-index">En route</span>
+      <h3>Track it in real time</h3>
+      <p>Watch the package move, turn by turn, from our app or the web.</p>
+    </div>
+    <div class="how-step">
+      <span class="how-index">Delivered</span>
+      <h3>Get confirmation</h3>
+      <p>A notification lands the moment it's handed to the recipient.</p>
+    </div>
+  </div>
+</section>
+
+<section class="promise">
+  <div class="promise-media">
+    <img src="images/delivery.png" alt="Courier making a delivery">
+  </div>
+  <div class="promise-copy">
+    <h2>Built to arrive on time, every time</h2>
+    <p>We route every job the way a dispatcher would shortest path, least risk, live updates the whole way. No fleet to maintain on your end, no guessing where a package is.</p>
+    <p>From a single parcel to a standing weekly route, the handling is the same: careful, tracked, and confirmed at the door.</p>
+    <a href="location.html" class="btn btn-primary">See coverage areas</a>
+  </div>
+</section>
+
+
+<section class="slider">
+
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="images/banner go1.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="images/banner33.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="images/banner4.png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="brand-mark">ECH0<span class="brand-mark--accent">GO</span></span>
+    <p>echogo@gmail.com</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.getElementById('navToggle').addEventListener('click', function () {
+  var nav = document.getElementById('siteNav');
+  var expanded = this.getAttribute('aria-expanded') === 'true';
+  this.setAttribute('aria-expanded', String(!expanded));
+  nav.classList.toggle('is-open');
+});
+</script>
+</body>
+</html>
